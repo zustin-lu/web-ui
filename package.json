@@ -9,10 +9,11 @@
     "node": ">=20.6.0"
   },
   "scripts": {
+    "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "build:lib": "npm run clean:build && node --env-file=.env scripts/esbuild.mjs",
-    "clean:build": "node --env-file=.env scripts/clean-build.mjs"
+    "prebuild:lib": "node --env-file=.env scripts/clean-build.mjs",
+    "build:lib": "node --env-file=.env scripts/esbuild.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",

@@ -6,7 +6,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const directoryToRemove = path.join(__dirname, '../', process.env.BUILD_DIR_NAME);
-console.log(',eme', directoryToRemove);
 
 async function removeDirectory(dirPath) {
   try {
