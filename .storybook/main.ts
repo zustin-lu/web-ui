@@ -21,10 +21,10 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   async viteFinal(config) {
-    const extendedConfigs: InlineConfig = {
+    const extendedConfig: InlineConfig = {
       plugins: [tsconfigPaths()]
     };
-    return mergeConfig(config, extendedConfigs);
+    return mergeConfig(config, extendedConfig);
   }
 };
 
