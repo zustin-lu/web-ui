@@ -4,16 +4,16 @@
   "description": "UI Library for building e-commerce website",
   "author": "Justin Lu",
   "license": "ISC",
-  "main": "index.js",
   "engines": {
     "node": ">=20.6.0"
   },
   "scripts": {
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build",
     "prebuild:lib": "node --env-file=.env scripts/clean-build.mjs",
-    "build:lib": "node --env-file=.env scripts/esbuild.mjs"
+    "build:storybook": "storybook build",
+    "build:lib": "node --env-file=.env scripts/esbuild.mjs",
+    "postbuild:lib": "tsc && tsc-alias"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
@@ -34,6 +34,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.5.1",
+    "tsc-alias": "^1.8.8",
     "typescript": "^5.2.2",
     "vite-tsconfig-paths": "^4.2.1"
   },
