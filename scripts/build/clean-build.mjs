@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const directoryToRemove = path.join(__dirname, '../', process.env.BUILD_DIR_NAME);
+const directoryToRemove = path.join(__dirname, '../../', process.env.BUILD_DIR_NAME);
 
 async function removeDirectory(dirPath) {
   try {
