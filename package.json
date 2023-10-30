@@ -10,9 +10,9 @@
   "scripts": {
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "prebuild:lib": "node --env-file=.env scripts/clean-build.mjs",
+    "prebuild:lib": "node --env-file=.env scripts/build/clean-build.mjs",
     "build:storybook": "storybook build",
-    "build:lib": "node --env-file=.env scripts/esbuild.mjs",
+    "build:lib": "node --env-file=.env scripts/build/esbuild.mjs",
     "postbuild:lib": "tsc && tsc-alias"
   },
   "devDependencies": {
