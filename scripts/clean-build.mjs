@@ -1,3 +1,9 @@
+/**
+ * Why not just use `rm -rf` command from terminal?
+ * That command not available on Windows OS by default.
+ * So this script aim to make things work on cross-platform for better development experience.
+ */
+
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
