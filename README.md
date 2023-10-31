@@ -1,7 +1,6 @@
 # My WebUI
 
-My WebUI Library is a collection of reusable UI components that can be used to build beautiful, useful & responsive web applications.
-Using modern web technologies and follows best practices to ensure high quality and maintainability.
+This library consists of a set of reusable UI elements that make it easy to create attractive, functional, and adaptable web applications. It uses modern web technologies and follows community best practices to ensure top-notch quality and ease of maintenance.
 
 ## Library motivation
 
