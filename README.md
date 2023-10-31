@@ -22,7 +22,7 @@ Before publishing your package, it's crucial to follow the guidelines outlined i
 
 - Make sure you installed NodeJS.
 - Have NPM Account with `read` and `write` permission to this package.
-- Ensure you logged in from NPM CLI with [these command](https://docs.npmjs.com/creating-a-new-npm-user-account): `npm login` then `npm whoami`.
+- Ensure you logged in from NPM CLI with [these commands](https://docs.npmjs.com/creating-a-new-npm-user-account): `npm login` then `npm whoami`.
 
 To publish your package to the NPM Registry, simply run the following command: `npm publish --access public`. This command is used for [publishing a scoped public package to the NPM Registry](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages).
 
