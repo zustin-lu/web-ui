@@ -23,9 +23,7 @@ Please follow [this instruction](https://docs.npmjs.com/cli/v10/using-npm/develo
 
 **Publish Instruction**
 
-Run this command `npm publish --access public` to publish to NPM Registry.
-
-👉 [Read official document about publishing scoped public package](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
+Run this command `npm publish --access public` to [publishing scoped public package to NPM Registry](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages).
 
 ## Contributing
 
