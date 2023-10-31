@@ -13,7 +13,7 @@ For developers, you could reference to [this official document](https://docs.npm
 
 Whenever you publish this package to NPM Registry.
 It will including only content inside the `"files"` config inside `package.json`
-Some important files such as README, LICENSE, etc... implicitly included by default - [See more here](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files)
+Some important files such as README, LICENSE, etc... [implicitly included by default](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files)
 
 **Before publish package**
 
