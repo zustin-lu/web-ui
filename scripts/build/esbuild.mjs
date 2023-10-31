@@ -5,6 +5,6 @@ await esbuild.build({
   minify: true,
   treeShaking: true,
   jsx: 'automatic', // https://esbuild.github.io/content-types/#auto-import-for-jsx
-  entryPoints: ['exports/entry.ts'],
+  entryPoints: ['exports/index.ts'],
   outdir: process.env.BUILD_DIR_NAME,
 });

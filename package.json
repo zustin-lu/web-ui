@@ -1,16 +1,17 @@
 {
-  "name": "ecom-ui",
+  "name": "@justinlu/web-ui",
   "version": "1.0.0",
-  "description": "UI Library for building e-commerce website",
-  "author": "Justin Lu",
+  "author": "Justin Lu <lmint.dev@gmail.com>",
   "license": "ISC",
   "engines": {
     "node": ">=20.6.0"
   },
+  "main": "dist/index.js",
+  "files": ["dist/**/*"],
   "scripts": {
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "prebuild:lib": "node --env-file=.env scripts/build/clean-build.mjs",
+    "prebuild:lib": "node --env-file=.env scripts/build/pre-build.mjs",
     "build:storybook": "storybook build",
     "build:lib": "node --env-file=.env scripts/build/esbuild.mjs",
     "postbuild:lib": "tsc && tsc-alias"
