@@ -9,11 +9,11 @@ This library is built on top of RadixUI, TailwindCSS and some support from Shadc
 
 ## How to publish the package to NPM Registry
 
-For developers, you could reference to (this official document)[https://docs.npmjs.com/cli/v10/using-npm/developers] from NPM to get some NPM essentials knowledge for develop and publish a package to their registry.
+For developers, you could reference to [this official document](https://docs.npmjs.com/cli/v10/using-npm/developers) from NPM to get some NPM essentials knowledge for develop and publish a package to their registry.
 
 Whenever you publish this package to NPM Registry.
 It will including only content inside the `"files"` config inside `package.json`
-Some important files such as README, LICENSE, etc... implicitly included by default - (See more here)[https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files]
+Some important files such as README, LICENSE, etc... implicitly included by default - [See more here](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files)
 
 **Before publish package**
 
