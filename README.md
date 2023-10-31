@@ -19,7 +19,7 @@ Some important files such as README, LICENSE, etc... [implicitly included by def
 
 Please follow [this instruction](https://docs.npmjs.com/cli/v10/using-npm/developers#before-publishing-make-sure-your-package-installs-and-works) from NPM Official Document to make sure you'll not publishing a broken or pointless package.
 
-🤪 Nice to have: [Check the package distribution files is not including our development stuffs before publish](https://docs.npmjs.com/cli/v10/using-npm/developers#testing-whether-your-npmignore-or-files-config-works)
+🤪 Nice to have: [Ensure that package distribution files do not include any development files](https://docs.npmjs.com/cli/v10/using-npm/developers#testing-whether-your-npmignore-or-files-config-works)
 
 **Publish Instruction**
 
