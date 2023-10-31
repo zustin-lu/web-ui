@@ -1,39 +1,33 @@
 # My WebUI
 
-My WebUI Library is a collection of reusable UI components that can be used to build beautiful and responsive web applications. 
-It is built using modern web technologies and follows best practices to ensure high quality and maintainability.
+My WebUI Library is a collection of reusable UI components that can be used to build beautiful, useful & responsive web applications.
+Using modern web technologies and follows best practices to ensure high quality and maintainability.
 
-## Features
+## Library motivation
 
-- A collection of reusable UI components
-- Built using modern web technologies
-- Responsive design
-- Easy to customize and extend
+This library is built on top of RadixUI, TailwindCSS and some support from Shadcn/ui
 
-## Installation
+## How to publish the package to NPM Registry
 
-To install My WebUI Library, simply run:
+For developers, you could reference to (this official document)[https://docs.npmjs.com/cli/v10/using-npm/developers] from NPM to get some NPM essentials knowledge for develop and publish a package to their registry.
 
-npm install my-awesome-ui-library
+---
 
-## Usage
+Whenever you publish this package to NPM Registry.
+It will including only content inside the `"files"` config inside `package.json`
+Some important files such as README, LICENSE, etc... implicitly included by default - (See more here)[https://docs.npmjs.com/cli/v10/configuring-npm/package-json#files]
 
-To use My WebUI Library in your project, simply import the components you need and add them to your HTML:
+**Before publish package**
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Awesome App</title>
-    <link rel="stylesheet" href="path/to/my-awesome-ui-library.css">
-  </head>
-  <body>
-    <h1>Welcome to My Awesome App</h1>
-    <button class="btn btn-primary">Click me!</button>
-    <script src="path/to/my-awesome-ui-library.js"></script>
-  </body>
-</html>
-```
+Please follow [this instruction](https://docs.npmjs.com/cli/v10/using-npm/developers#before-publishing-make-sure-your-package-installs-and-works) from NPM Official Document to make sure you'll not publishing a broken or pointless package.
+
+🤪 Nice to have: [Check the package distribution files is not including our development stuffs before publish](https://docs.npmjs.com/cli/v10/using-npm/developers#testing-whether-your-npmignore-or-files-config-works)
+
+**Publish Instruction**
+
+Run this command `npm publish --access public` to publish to NPM Registry.
+
+👉 [Read official document about publishing scoped public package](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
 
 ## Contributing
 
@@ -45,4 +39,4 @@ If you would like to contribute to My WebUI Library, please follow these steps:
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
 
-Let me know if you need any further assistance!
+<a href="mailto:lmint.dev@gmail.com">Let me know</a> if you need any further assistance!
