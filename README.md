@@ -14,7 +14,7 @@ When you publish your package to the NPM Registry, it will include only the cont
 
 **Pre-Publishing Checklist**
 
-Before publishing your package, it's crucial to follow the guidelines outlined in [NPM's official documentation](https://docs.npmjs.com/cli/v10/using-npm/developers#before-publishing-make-sure-your-package-installs-and-works) to ensure that you're not releasing a broken or unnecessary package.
+Before publishing your package, it's crucial to follow the [NPM 's Developer guidelines](https://docs.npmjs.com/cli/v10/using-npm/developers#before-publishing-make-sure-your-package-installs-and-works) to ensure that you're not releasing a broken or unnecessary package.
 
 🤪 Nice-to-Have: [Make sure your package's distribution files exclude any development files](https://docs.npmjs.com/cli/v10/using-npm/developers#testing-whether-your-npmignore-or-files-config-works).
 

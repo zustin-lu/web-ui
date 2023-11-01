@@ -14,7 +14,7 @@
     "prebuild:lib": "node --env-file=.env scripts/build/pre-build.mjs",
     "build:storybook": "storybook build",
     "build:lib": "node --env-file=.env scripts/build/esbuild.mjs",
-    "postbuild:lib": "tsc && tsc-alias"
+    "postbuild:lib": "tsc && tsc-alias && npm pack --dry-run"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
