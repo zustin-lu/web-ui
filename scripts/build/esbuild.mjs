@@ -7,4 +7,4 @@ await esbuild.build({
   jsx: 'automatic', // https://esbuild.github.io/content-types/#auto-import-for-jsx
   entryPoints: ['exports/index.ts'],
   outdir: process.env.BUILD_DIR_NAME,
-});
+}).catch(() => process.exit(1));
