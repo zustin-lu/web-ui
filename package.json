@@ -14,7 +14,7 @@
     "url": "https://github.com/zustin-lu/web-ui/issues"
   },
   "sideEffects": false,
-  "main": "dist/index.js",
+  "main": "dist/exports/index.js",
   "files": [
     "dist/**/*"
   ],

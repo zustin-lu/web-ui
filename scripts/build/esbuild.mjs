@@ -1,6 +1,7 @@
 import * as esbuild from 'esbuild';
 import path from 'path';
 
+// --------- Build src folder ---------
 await esbuild.build({
   bundle: true,
   treeShaking: true,
@@ -16,8 +17,9 @@ await esbuild.build({
   outbase: 'src',
 }).catch(() => process.exit(1));
 
+// --------- Build exports folder ---------
 await esbuild.build({
-  entryPoints: ['exports/components.ts'],
+  entryPoints: ['exports/**/*.ts'],
   outdir: path.join(process.env.BUILD_OUT_DIR, 'exports'),
   target: 'es6',
   format: 'esm',
