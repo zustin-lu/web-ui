@@ -6,6 +6,13 @@
   "engines": {
     "node": ">=20.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zustin-lu/web-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zustin-lu/web-ui/issues"
+  },
   "sideEffects": false,
   "main": "dist/index.js",
   "files": [
