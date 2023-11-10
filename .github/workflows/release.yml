@@ -11,6 +11,7 @@ permissions:
 jobs:
   release:
     name: Release
+    if: "contains(github.event.head_commit.message, 'publish npm package')"
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
@@ -38,4 +39,4 @@ jobs:
         run: |
           echo "test github token ${GITHUB_TOKEN}"
           npm run build:lib
-          npx semantic-release -d
+          npx semantic-release
