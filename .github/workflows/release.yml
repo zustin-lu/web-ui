@@ -37,6 +37,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           BUILD_OUT_DIR: ${{ vars.BUILD_OUT_DIR }}
         run: |
-          echo "test github token ${GITHUB_TOKEN}"
+          echo "NPM Token test ${NPM_TOKEN}"
           npm run build:lib
           npx semantic-release

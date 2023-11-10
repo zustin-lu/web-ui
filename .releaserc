@@ -10,12 +10,15 @@
       }
     ],
     "@semantic-release/release-notes-generator",
-    ["@semantic-release/github"],
     [
-      "@semantic-release/npm",
+      "@semantic-release/github",
       {
-        "npmPublish": true
+        "assets": [
+          "dist",
+          "package.json"
+        ]
       }
-    ]
+    ],
+    "@semantic-release/npm"
   ]
 }
