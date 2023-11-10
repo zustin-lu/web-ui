@@ -34,7 +34,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run:
-          echo "test github token ${GITHUB_TOKEN}"
-          npm run build:lib
-          npx semantic-release -d
+        run: echo "test github token ${GITHUB_TOKEN}"
+        run: npm run build:lib
+        run: npx semantic-release -d
