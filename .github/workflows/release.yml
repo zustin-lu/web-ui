@@ -34,6 +34,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          BUILD_OUT_DIR: dist
         run: |
           echo "test github token ${GITHUB_TOKEN}"
           npm run build:lib
