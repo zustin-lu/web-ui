@@ -14,14 +14,8 @@
       "@semantic-release/github",
       {
         "assets": [
-          {
-            "path": "dist/**",
-            "label": "Distribution"
-          },
-          {
-            "path": "package*.json",
-            "label": "Package Metadata"
-          }
+          "dist/**",
+          "package*.json"
         ]
       }
     ],
