@@ -15,7 +15,7 @@
   },
   "sideEffects": false,
   "main": "dist/exports/index.js",
-  "types": "dist/exports/index.d.ts",
+  "types": "dist/types/exports/index.d.ts",
   "files": [
     "dist/**/*"
   ],

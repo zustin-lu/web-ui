@@ -7,20 +7,22 @@ import chalk from 'chalk';
  * @param {Object} aliasMap - An object containing aliases and their corresponding paths.
  * @returns {Object} - A Rollup plugin object.
  */
-export const replaceAliasImportPlugin = (aliasMap) => {
+export const resolveAliasImportPlugin = (aliasMap) => {
   return {
     name: 'Resolve Path Alias',
     setup(build) {
       build.onLoad({ filter: /^./ }, async (args) => {
         let fileContent = await fs.promises.readFile(args.path, 'utf8');
-        
-        const aliases = Object.keys(aliasMap);
-        aliases.forEach((alias) => {
+        const backSteps = path.relative(args.path, 'exports');
+
+        Object.keys(aliasMap).forEach((alias) => {
           const regex = new RegExp(alias, 'g');
-          fileContent = fileContent.replace(regex, aliasMap[alias]);
+          const resolvedPath = path.join(backSteps, aliasMap[alias]);
+
+          fileContent = fileContent.replace(regex, resolvedPath);
           
-          const normalizedPath = path.relative('.', args.path);
-          console.info(`${chalk.blue(normalizedPath)} - replaced the ${alias} import with ${aliasMap[alias]}`);
+          const filePath = path.relative('.', args.path);
+          console.info(`${filePath} - replaced the ${chalk.blue(alias)} import alias with ${chalk.blue(resolvedPath)}`);
         });
   
         return {
