@@ -1,6 +1,8 @@
 import * as esbuild from 'esbuild';
 import path from 'path';
 
+import { replaceAliasImportPlugin } from './plugins/replace-alias-import.mjs';
+
 // --------- Build src folder ---------
 await esbuild.build({
   bundle: true,
@@ -23,4 +25,7 @@ await esbuild.build({
   outdir: path.join(process.env.BUILD_OUT_DIR, 'exports'),
   target: 'es6',
   format: 'esm',
+  plugins: [replaceAliasImportPlugin({
+    '@components': '../components',
+  })]
 }).catch(() => process.exit(1));
