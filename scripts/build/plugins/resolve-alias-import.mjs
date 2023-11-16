@@ -11,9 +11,9 @@ export const resolveAliasImportPlugin = (aliasMap) => {
   return {
     name: 'Resolve Path Alias',
     setup(build) {
-      build.onLoad({ filter: /^./ }, async (args) => {
+      build.onLoad({ filter: /\.(js|ts)$/ }, async (args) => {
         let fileContent = await fs.promises.readFile(args.path, 'utf8');
-        const backSteps = path.relative(args.path, 'exports');
+        const backSteps = path.relative('dist/exports', 'dist');
 
         Object.keys(aliasMap).forEach((alias) => {
           const regex = new RegExp(alias, 'g');

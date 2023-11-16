@@ -1,12 +1,13 @@
-import type { FunctionComponent } from 'react';
+import type { ComponentProps, FC, PropsWithChildren } from 'react';
+// import { Button as RadixButton } from '@radix-ui/themes';
 
-export type ButtonProps = {
-  name: string;
-  variant: 'big' | 'small';
-}
+// export type ButtonProps = ComponentProps<{}>;
+export type ButtonProps = PropsWithChildren<{}>;
 
-export const Button: FunctionComponent<ButtonProps> = () => {
+export const Button: FC<ButtonProps> = ({ children, ...buttonProps }) => {
   return (
-    <button>This is button</button>
+    <button {...buttonProps}>
+      {children}
+    </button>
   )
 }
