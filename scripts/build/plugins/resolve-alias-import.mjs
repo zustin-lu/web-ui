@@ -13,7 +13,7 @@ export const resolveAliasImportPlugin = (aliasMap) => {
     setup(build) {
       build.onLoad({ filter: /\.(js|ts)$/ }, async (args) => {
         let fileContent = await fs.promises.readFile(args.path, 'utf8');
-        const backSteps = path.relative('dist/exports', 'dist');
+        const backSteps = path.relative('dist/target', 'dist');
 
         Object.keys(aliasMap).forEach((alias) => {
           const regex = new RegExp(alias, 'g');
