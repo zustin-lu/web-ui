@@ -1,0 +1,64 @@
+---
+title: NPM best practices
+sidebar_position: 1
+---
+
+Creating an NPM (Node Package Manager) package involves several best practices to ensure that your package is well-structured, maintainable, and user-friendly. Here are key best practices to consider:
+
+## Project Structure
+Organize your project with a clear structure. Typically, this includes:
+
+```bash
+src/: # Source files.
+lib/ or dist/: # Transpiled or bundled files for distribution.
+tests/: # Test scripts.
+docs/: # Documentation files.
+examples/: # Example projects or usage examples.
+```
+
+## package.json Configuration
+
+- Metadata: Provide detailed metadata like name, version, description, keywords, author, and license.
+- Scripts: Define useful scripts for building, testing, and more (scripts field).
+- Dependencies: Clearly specify dependencies (dependencies) and development dependencies (devDependencies).
+- Entry Point: Set the main field to point to the primary entry point of your package.
+
+## Coding Standards
+
+Follow consistent coding styles (consider using tools like ESLint).
+Write modular and reusable code.
+Use ES6 or later features for better syntax and capabilities.
+
+## Documentation
+
+Provide a comprehensive README.md with an introduction, installation instructions, usage examples, API documentation, and contribution guidelines.
+Consider additional documentation, either in the repo or through tools like JSDoc.
+
+## Testing and Quality Assurance
+
+Write tests (unit, integration) to ensure the reliability of your code (use frameworks like Jest or Mocha).
+Use Continuous Integration (CI) tools (like GitHub Actions or Travis CI) to automate testing and linting.
+Versioning:
+
+Follow semantic versioning (SemVer) to manage version numbers.
+
+## Licensing
+
+Choose an appropriate license for your project (like MIT, GPL, Apache, etc.) and include it in your package.
+Publishing:
+
+Before publishing, ensure your NPM package doesn’t contain unnecessary files. Use .npmignore or the files field in package.json to control this.
+Use npm publish to publish your package. Consider using scoped packages for grouping related packages under a namespace.
+Maintenance:
+
+Respond to issues and pull requests timely.
+Keep dependencies up-to-date and release new versions as necessary.
+
+## Security
+
+Be mindful of security vulnerabilities. Regularly audit dependencies for vulnerabilities using tools like npm audit.
+Remember, these practices are guidelines and can vary depending on the specific requirements and complexity of your NPM package.
+
+## Reading futhers
+
+- [How to publish to NPM Registry](/for-developers/how-to-publish-to-npm)
