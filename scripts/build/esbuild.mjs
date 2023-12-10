@@ -17,15 +17,6 @@ await esbuild.build({
   // chunkNames: 'shared/components-[hash]',
 }).catch(() => process.exit(1));
 
-// --------- Build themes ---------
-await esbuild.build({
-  entryPoints: ['src/themes/**/*.tsx'],
-  format: 'esm',
-  jsx: 'automatic', // https://esbuild.github.io/content-types/#auto-import-for-jsx
-  outdir: path.join(process.env.BUILD_OUT_DIR),
-  outbase: 'src',
-}).catch(() => process.exit(1));
-
 // --------- Build exports folder ---------
 await esbuild.build({
   entryPoints: ['src/exports/**/*.ts'],
@@ -33,6 +24,6 @@ await esbuild.build({
   target: 'es6',
   format: 'esm',
   plugins: [
-    resolveAliasImportPlugin({ '@components': 'components', '@themes': 'themes' })
+    resolveAliasImportPlugin({ '@components': 'components' })
   ]
 }).catch(() => process.exit(1));
